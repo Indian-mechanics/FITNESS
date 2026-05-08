@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Shopping Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Luxury Shop</div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button id="search-btn">🔍</button>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+                <div class="wishlist-icon" id="wishlist-icon">
+                    ❤️ <span id="wishlist-count">0</span>
+                </div>
+                <button id="theme-toggle">🌙</button>
+                <button id="user-btn">👤</button>
+            </div>
+            <ul class="nav-tabs">
+                <li><a href="#home" class="tab-link active" data-tab="home">Home</a></li>
+                <li><a href="#shop" class="tab-link" data-tab="shop">Shop</a></li>
+                <li><a href="#about" class="tab-link" data-tab="about">About Us</a></li>
+                <li><a href="#find" class="tab-link" data-tab="find">Find Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <h1>Welcome to Luxury Shop</h1>
+                <p>Discover premium products for your lifestyle</p>
+                <button class="cta-button">Shop Now</button>
+            </div>
+            <div class="newsletter">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for exclusive deals</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        <section id="shop" class="tab-content">
+            <h2>Our Products</h2>
+            <div class="filters">
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="home">Home & Garden</option>
+                </select>
+                <input type="range" id="price-filter" min="0" max="200" value="200">
+                <span id="price-display">$0 - $200</span>
+            </div>
+            <div class="products" id="products-grid">
+                <div class="product" data-id="1" data-category="electronics" data-price="99.99">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 1">
+                    <h3>Premium Headphones</h3>
+                    <p>$99.99</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️</button>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+                <div class="product" data-id="2" data-category="clothing" data-price="149.99">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 2">
+                    <h3>Luxury Watch</h3>
+                    <p>$149.99</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️</button>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+                <div class="product" data-id="3" data-category="home" data-price="79.99">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 3">
+                    <h3>Designer Lamp</h3>
+                    <p>$79.99</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️</button>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+                <div class="product" data-id="4" data-category="electronics" data-price="299.99">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 4">
+                    <h3>Smartphone</h3>
+                    <p>$299.99</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️</button>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+                <div class="product" data-id="5" data-category="clothing" data-price="199.99">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 5">
+                    <h3>Designer Dress</h3>
+                    <p>$199.99</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️</button>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+                <div class="product" data-id="6" data-category="home" data-price="129.99">
+                    <img src="https://via.placeholder.com/300x200" alt="Product 6">
+                    <h3>Modern Sofa</h3>
+                    <p>$129.99</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️</button>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="tab-content">
+            <h2>About Us</h2>
+            <p>We are a premium shopping destination offering high-quality products curated for discerning customers. Our mission is to provide an exceptional shopping experience with luxury items that enhance your lifestyle.</p>
+            <div class="reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p>"Amazing quality and service!" - John D.</p>
+                </div>
+                <div class="review">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Great products, fast delivery." - Sarah M.</p>
+                </div>
+            </div>
+        </section>
+        <section id="find" class="tab-content">
+            <h2>Find Us</h2>
+            <div class="contact-info">
+                <p><strong>Address:</strong> 123 Luxury Lane, Premium City, PC 12345</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> info@luxuryshop.com</p>
+            </div>
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="map-placeholder">
+                <p>Map would be embedded here</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#find">Find Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luxury Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="wishlist-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Wishlist</h2>
+            <div id="wishlist-items"></div>
+        </div>
+    </div>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content large">
+            <span class="close">&times;</span>
+            <div id="product-details"></div>
+        </div>
+    </div>
+
+    <div id="user-modal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close">&times;</span>
+            <h2>User Account</h2>
+            <div class="auth-switches">
+                <button id="login-btn" class="auth-switch active">Login</button>
+                <button id="signup-btn" class="auth-switch">Sign Up</button>
+            </div>
+            <form id="login-form" class="auth-form active">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <form id="signup-form" class="auth-form">
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div id="user-info" class="auth-info" style="display: none;">
+                <p>Signed in as <strong><span id="user-name"></span></strong></p>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
+        import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js';
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyAb3e9Z-TEiPW8N8W_IzBanjDjLszrg_po",
+
+            authDomain: "fitness-75a09.firebaseapp.com",
+
+            projectId: "fitness-75a09",
+
+            storageBucket: "fitness-75a09.firebasestorage.app",
+
+            messagingSenderId: "435150086754",
+
+            appId: "1:435150086754:web:f78a91291d738f65a0a73b",
+
+            measurementId: "G-YRW5PYQQG9"
+
+        };
+
+
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        // Make Firebase available globally
+        window.firebaseApp = app;
+        window.db = db;
+        window.auth = auth;
+        window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+        window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+        window.signOut = signOut;
+        window.collection = collection;
+        window.getDocs = getDocs;
+    </script>
+</body>
+</html>
